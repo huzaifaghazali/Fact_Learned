@@ -4,6 +4,15 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  background-color: #292524;
+  color: #fafaf9;
+}
+
+.fact-form {
+   background-color: #44403c;
+}
+
 h1 {
   font-size: 4.2rem;
   text-transform: uppercase;
@@ -12,6 +21,7 @@ h1 {
 }
 
 .fact {
+  background-color: #44403c;
   font-size: 2rem;
   line-height: 1.4;
   font-family: sans-serif;
