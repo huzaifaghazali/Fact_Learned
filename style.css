@@ -1,0 +1,26 @@
+html {
+   /* 10 / 16 = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%
+}
+
+h1 {
+   font-size: 4.2rem;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+p {
+   font-size: 2rem;
+   line-height: 1.4;
+   font-family: sans-serif;
+}
+
+span {
+   text-transform: uppercase;
+   font-size: 1.4rem;
+}
+
+ul {
+   list-style: none;
+}
