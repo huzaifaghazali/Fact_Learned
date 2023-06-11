@@ -1,3 +1,6 @@
+* {
+}
+
 html {
   /* 10 / 16 = 0.625 = 62.5% */
   /* Percentage of user's browser font-size setting */
@@ -7,6 +10,7 @@ html {
 body {
   background-color: #292524;
   color: #fafaf9;
+  font-family: 'Sono', sans-serif;
 }
 
 .fact-form {
@@ -25,7 +29,6 @@ h1 {
   font-size: 2rem;
   line-height: 1.4;
   font-family: sans-serif;
-  font-family: 'Sono', sans-serif;
 }
 
 .tag {
