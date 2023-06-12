@@ -68,6 +68,10 @@ h1 {
   margin-top: .6rem;
 }
 
+.category {
+  margin-bottom: 1.6rem;
+}
+
 .fact {
   background-color: #44403c;
   font-size: 2rem;
@@ -108,5 +112,37 @@ ul {
 .source:hover,
 .source:active {
   color: #3b82f6;
+}
+
+.btn {
+  border: none;
+  font-family: "Coiny", sans-serif;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  padding: 1.6rem 0 1.3rem;
+  background-image: linear-gradient(135deg, #3b82f6, #ef4444, #16a34a, #eab308);
+  color: inherit;
+  border-radius: 10rem;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(110%) rotate(-2deg);
+}
+
+.btn-large {
+  font-size: 2rem;
+  padding: 2rem 3.2rem 1.7rem;
+}
+
+.btn-all-categories {
+  margin-bottom: 1.6rem;
+  width: 100%;
+}
+
+.btn-category {
+  width: 100%;
+  background-image: none;
 }
 
