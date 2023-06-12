@@ -1,4 +1,7 @@
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -11,16 +14,22 @@ body {
   background-color: #292524;
   color: #fafaf9;
   font-family: 'Sono', sans-serif;
+  padding: 4.8rem;
+}
+
+.header {
+  margin-bottom: 4rem;
 }
 
 .fact-form {
    background-color: #44403c;
+   margin-bottom: 4rem;
+   padding: 1.6rem 3.2rem;
 }
 
 h1 {
   font-size: 4.2rem;
   text-transform: uppercase;
-  text-align: center;
   font-family: 'Coiny', Arial, sans-serif;
 }
 
@@ -29,6 +38,8 @@ h1 {
   font-size: 2rem;
   line-height: 1.4;
   font-family: sans-serif;
+  margin-bottom: 1.6rem;
+  padding: 1.6rem 2.4rem;
 }
 
 .tag {
