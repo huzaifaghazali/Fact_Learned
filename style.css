@@ -25,6 +25,7 @@ body {
    background-color: #44403c;
    margin-bottom: 4rem;
    padding: 1.6rem 3.2rem;
+   text-align: center;
 }
 
 h1 {
@@ -46,6 +47,7 @@ h1 {
   text-transform: uppercase;
   font-size: 1.4rem;
   font-family: 'Coiny', sans-serif;
+  padding: .3rem 1rem 0 1rem;
 }
 
 ul {
