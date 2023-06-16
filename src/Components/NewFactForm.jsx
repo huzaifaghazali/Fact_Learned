@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const NewFactForm = () => {
+const NewFactForm = ({ CATEGORIES }) => {
   return (
     <Wrapper>
       <form class='fact-form'>
@@ -10,9 +10,11 @@ const NewFactForm = () => {
         <input type='text' placeholder='Trustworthy source....' />
         <select>
           <option value=''>Choose category:</option>
-          <option value='technology'>Technology</option>
-          <option value='science'>Science</option>
-          <option value='finance'>Finance</option>
+          {CATEGORIES.map((category) => {
+            return (
+              <option key={category.name} value={category.name}>{category.name.toUpperCase()}</option>
+            )
+          })}
         </select>
         <button class='btn btn-large'>Post</button>
       </form>
