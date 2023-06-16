@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   Header,
   CategoryFilter,
@@ -8,10 +9,14 @@ import {
 import './style.css';
 
 function App() {
+  const [showForm, setShowForm] = useState(false);
+
+  const handleShowForm = () => setShowForm(!showForm);
+
   return (
     <>
-      <Header />
-      <NewFactForm />
+      <Header showForm={showForm} handleShowForm={handleShowForm} />
+      {showForm && <NewFactForm />}
       <main className='main'>
         <CategoryFilter />
         <FactList />

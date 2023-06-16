@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function Header() {
+function Header({ showForm, handleShowForm }) {
   const appTitle = 'Today I Learned';
   return (
     <Wrapper>
@@ -9,7 +9,9 @@ function Header() {
         <img src='logo.png' alt='logo Image' height={68} width={68} />
         <h1>{appTitle}</h1>
       </div>
-      <button className='btn btn-large btn-open'>Share a fact</button>
+      <button onClick={handleShowForm} className='btn btn-large btn-open'>
+        {showForm ? 'Close' : 'Share a fact'}
+      </button>
     </Wrapper>
   );
 }
