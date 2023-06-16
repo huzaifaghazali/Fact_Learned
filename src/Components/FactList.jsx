@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Fact from './Fact';
+
 const CATEGORIES = [
   { name: 'technology', color: '#3b82f6' },
   { name: 'science', color: '#16a34a' },
@@ -54,29 +56,7 @@ const FactList = () => {
       <ul className='facts-list'>
         {facts.map((fact) => {
           return (
-            <li key={fact.id} className='fact'>
-              <p>
-                {fact.text}
-                <a className='source' href={fact.source} target='_blank'>
-                  (Source)
-                </a>
-              </p>
-              <span
-                className='tag'
-                style={{
-                  backgroundColor: CATEGORIES.find(
-                    (cat) => cat.name === fact.category
-                  ).color,
-                }}
-              >
-                {fact.category}
-              </span>
-              <div className='vote-buttons'>
-                <button>👍 {fact.votesInteresting}</button>
-                <button>🤯 {fact.votesMindblowing}</button>
-                <button>⛔️ {fact.votesFalse}</button>
-              </div>
-            </li>
+            <Fact key={fact.id} {...fact} Categories={CATEGORIES}/>
           );
         })}
       </ul>

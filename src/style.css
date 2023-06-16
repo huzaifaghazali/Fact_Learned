@@ -36,7 +36,8 @@ ul {
 
 /* =========== Main Layout =========== */
 
-.container {
+
+#root {
   max-width: 150rem;
   margin: 0 auto;
 }
@@ -85,5 +86,12 @@ ul {
 @media (max-width: 62.5em) {
   body {
     padding: 3.2rem 4.8rem;
+  }
+}
+
+
+@media (max-width: 56.25em) {
+  .main {
+    grid-template-columns: 1fr;
   }
 }
