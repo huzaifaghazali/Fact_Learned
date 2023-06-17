@@ -11,7 +11,7 @@ function isValidHttpUrl(string) {
   return url.protocol === 'http:' || url.protocol === 'https:';
 }
 
-const NewFactForm = ({ handleShowForm, CATEGORIES }) => {
+const NewFactForm = ({ handleShowForm, setFacts, CATEGORIES }) => {
   const [text, setText] = useState('');
   const [source, setSource] = useState('http://example.com');
   const [category, setCategory] = useState('');
@@ -37,6 +37,7 @@ const NewFactForm = ({ handleShowForm, CATEGORIES }) => {
       };
 
       // 4. Add the new fact to the UI: add the fact to state
+      setFacts((facts) => [newFact, ...facts]);
 
       // 5. Reset input fields
       setText('');

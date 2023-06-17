@@ -3,16 +3,21 @@ import styled from 'styled-components';
 
 import Fact from './Fact';
 
-const FactList = ({initialFacts, CATEGORIES}) => {
-  // Temporary
-  const facts = initialFacts;
+const FactList = ({ facts, CATEGORIES }) => {
+  console.log(facts);
+  if (facts.length === 0) {
+    return (
+      <p className='message'>
+        No facts for this category yet! Create the first one ✌️
+      </p>
+    );
+  }
+
   return (
     <Wrapper>
       <ul className='facts-list'>
         {facts.map((fact) => {
-          return (
-            <Fact key={fact.id} {...fact} Categories={CATEGORIES}/>
-          );
+          return <Fact key={fact.id} {...fact} Categories={CATEGORIES} />;
         })}
       </ul>
     </Wrapper>

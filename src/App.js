@@ -55,16 +55,17 @@ const initialFacts = [
 
 function App() {
   const [showForm, setShowForm] = useState(false);
+  const [facts, setFacts] = useState(initialFacts);
 
   const handleShowForm = () => setShowForm(!showForm);
 
   return (
     <>
       <Header showForm={showForm} handleShowForm={handleShowForm} />
-      {showForm && <NewFactForm handleShowForm={handleShowForm} CATEGORIES={CATEGORIES} />}
+      {showForm && <NewFactForm handleShowForm={handleShowForm} CATEGORIES={CATEGORIES} setFacts={setFacts}/>}
       <main className='main'>
         <CategoryFilter />
-        <FactList initialFacts={initialFacts} CATEGORIES={CATEGORIES}/>
+        <FactList facts={facts} setFacts={setFacts} CATEGORIES={CATEGORIES}/>
       </main>
     </>
   );
