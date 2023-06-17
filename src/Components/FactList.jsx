@@ -3,8 +3,6 @@ import styled from 'styled-components';
 
 import Fact from './Fact';
 
-
-
 const FactList = ({initialFacts, CATEGORIES}) => {
   // Temporary
   const facts = initialFacts;
