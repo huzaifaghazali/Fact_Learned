@@ -61,7 +61,7 @@ function App() {
   return (
     <>
       <Header showForm={showForm} handleShowForm={handleShowForm} />
-      {showForm && <NewFactForm CATEGORIES={CATEGORIES} />}
+      {showForm && <NewFactForm handleShowForm={handleShowForm} CATEGORIES={CATEGORIES} />}
       <main className='main'>
         <CategoryFilter />
         <FactList initialFacts={initialFacts} CATEGORIES={CATEGORIES}/>
