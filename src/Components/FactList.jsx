@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import Fact from './Fact';
 
 const FactList = ({ facts, CATEGORIES }) => {
-  console.log(facts);
   if (facts.length === 0) {
     return (
       <p className='message'>
