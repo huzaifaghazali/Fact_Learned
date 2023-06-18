@@ -82,6 +82,15 @@ ul {
   background-image: none;
 }
 
+/* ============ Loader ============  */
+.message {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3.2rem;
+  font-weight: 600;
+  margin-top: 2.4rem;
+}
+
 /* ============ Media Query ============ */
 @media (max-width: 62.5em) {
   body {

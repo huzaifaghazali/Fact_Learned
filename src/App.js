@@ -6,6 +6,7 @@ import {
   CategoryFilter,
   NewFactForm,
   FactList,
+  Loader,
 } from './Components/index';
 
 import './style.css';
@@ -58,28 +59,45 @@ const initialFacts = [
 function App() {
   const [showForm, setShowForm] = useState(false);
   const [facts, setFacts] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleShowForm = () => setShowForm(!showForm);
 
   useEffect(() => {
     async function getFacts() {
+      setIsLoading(true);
       const { data: facts, error } = await supabase
         .from('facts')
-        .select('*');
+        .select('*')
+        .order('votesInteresting', { ascending: false })
+        .limit(1000);
       
-      setFacts(facts)
+        if (!error) setFacts(facts);
+        else alert('There was a problem getting data');
+        setIsLoading(false);
+        
     }
 
     getFacts();
-  }, [])
+  }, []);
 
   return (
     <>
       <Header showForm={showForm} handleShowForm={handleShowForm} />
-      {showForm && <NewFactForm handleShowForm={handleShowForm} CATEGORIES={CATEGORIES} setFacts={setFacts}/>}
+      {showForm && (
+        <NewFactForm
+          handleShowForm={handleShowForm}
+          CATEGORIES={CATEGORIES}
+          setFacts={setFacts}
+        />
+      )}
       <main className='main'>
         <CategoryFilter />
-        <FactList facts={facts} setFacts={setFacts} CATEGORIES={CATEGORIES}/>
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <FactList facts={facts} setFacts={setFacts} CATEGORIES={CATEGORIES} />
+        )}
       </main>
     </>
   );
