@@ -12,12 +12,17 @@ const CATEGORIES = [
   { name: 'news', color: '#8b5cf6' },
 ];
 
-const CategoryFilter = () => {
+const CategoryFilter = ({ setCurrentCategory }) => {
   return (
     <Wrapper>
       <ul>
         <li className='category'>
-          <button className='btn btn-all-categories'>All</button>
+          <button
+            className='btn btn-all-categories'
+            onClick={() => setCurrentCategory('all')}
+          >
+            All
+          </button>
         </li>
 
         {CATEGORIES.map((category) => {
@@ -25,6 +30,7 @@ const CategoryFilter = () => {
             <li key={category.name} className='category'>
               <button
                 className='btn btn-category'
+                onClick={() => setCurrentCategory(category.name)}
                 style={{ backgroundColor: category.color }}
               >
                 {category.name}

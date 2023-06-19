@@ -19,6 +19,7 @@ const FactList = ({ facts, CATEGORIES }) => {
           return <Fact key={fact.id} {...fact} Categories={CATEGORIES} />;
         })}
       </ul>
+      <p className='info'>There are {facts.length} facts in the database. Add your own!</p>
     </Wrapper>
   );
 };
@@ -92,5 +93,10 @@ const Wrapper = styled.section`
   .source:hover,
   .source:active {
     color: #3b82f6;
+  }
+
+  .info {
+    text-align: center;
+    font-size: 1.5rem;
   }
 `;
