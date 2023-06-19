@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Fact from './Fact';
 
-const FactList = ({ facts, CATEGORIES }) => {
+const FactList = ({ facts, setFacts, CATEGORIES }) => {
   if (facts.length === 0) {
     return (
       <p className='message'>
@@ -16,10 +16,19 @@ const FactList = ({ facts, CATEGORIES }) => {
     <Wrapper>
       <ul className='facts-list'>
         {facts.map((fact) => {
-          return <Fact key={fact.id} {...fact} Categories={CATEGORIES} />;
+          return (
+            <Fact
+              key={fact.id}
+              fact={fact}
+              setFacts={setFacts}
+              Categories={CATEGORIES}
+            />
+          );
         })}
       </ul>
-      <p className='info'>There are {facts.length} facts in the database. Add your own!</p>
+      <p className='info'>
+        There are {facts.length} facts in the database. Add your own!
+      </p>
     </Wrapper>
   );
 };
@@ -80,6 +89,9 @@ const Wrapper = styled.section`
 
   .vote-buttons button:hover {
     background-color: #292524;
+  }
+  .vote-buttons button:disabled {
+    background-color: #44403c;
   }
 
   .source:link,
