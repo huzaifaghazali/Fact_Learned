@@ -15,7 +15,7 @@ body {
   background-color: #292524;
   color: #fafaf9;
   font-family: 'Sono', sans-serif;
-  padding: 4.8rem 6.4rem;
+  padding: 4.8rem 6.4rem 0;
 }
 
 .hidden {
@@ -40,13 +40,17 @@ ul {
 #root {
   max-width: 150rem;
   margin: 0 auto;
+
 }
 
 .main {
   display: grid;
   grid-template-columns: 25rem 1fr;
   gap: 4.8rem;
+  height: calc(100vh - 4.8rem - 6.8rem - 4.8rem);
 }
+
+
 
 /* =========== Buttons =========== */
 .btn {
@@ -102,5 +106,6 @@ ul {
 @media (max-width: 56.25em) {
   .main {
     grid-template-columns: 1fr;
+    height: auto;
   }
 }

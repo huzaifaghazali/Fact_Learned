@@ -14,7 +14,7 @@ function isValidHttpUrl(string) {
 
 const NewFactForm = ({ handleShowForm, setFacts, CATEGORIES }) => {
   const [text, setText] = useState('');
-  const [source, setSource] = useState('http://example.com');
+  const [source, setSource] = useState('');
   const [category, setCategory] = useState('');
   const [isUploading, setIsUploading] = useState(false);
 

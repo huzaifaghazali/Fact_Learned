@@ -36,6 +36,10 @@ const FactList = ({ facts, setFacts, CATEGORIES }) => {
 export default FactList;
 
 const Wrapper = styled.section`
+  
+  overflow: scroll;
+  padding-bottom: 4rem;
+  
   .fact {
     background-color: #44403c;
     font-size: 2rem;
@@ -110,5 +114,11 @@ const Wrapper = styled.section`
   .info {
     text-align: center;
     font-size: 1.5rem;
+  }
+
+  .disputed {
+    color: #ef4444;
+    font-weight: 600;
+    margin-right: 1rem;
   }
 `;
